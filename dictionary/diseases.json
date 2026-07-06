@@ -1,0 +1,156 @@
+{
+  "Impaired myocardial performance": {
+    "keywords": [
+      "carditis",
+      "myocarditis",
+      "pericarditis",
+      "heart failure",
+      "congestive heart failure",
+      "impaired lv systolic function",
+      "poor lv systolic function",
+      "poor lv function",
+      "poor lv contractility",
+      "impaired myocardial performance",
+      "poor myocardial performance",
+      "lv dysfunction",
+      "ventricular dysfunction",
+      "depressed lv function"
+    ],
+    "lvef_less_than": 50,
+    "exclude": [
+      "no myocarditis",
+      "no evidence of myocarditis"
+    ]
+  },
+  "Cardiomyopathy": {
+    "keywords": [
+      "cardiomyopathy",
+      "dcm",
+      "hcm",
+      "rcm",
+      "heart failure",
+      "dilated cardiomyopathy",
+      "hypertrophic cardiomyopathy",
+      "restrictive cardiomyopathy"
+    ],
+    "exclude": []
+  },
+  "Kawasaki disease": {
+    "keywords": [
+      "kawasaki",
+      "kawasaki disease",
+      "kd",
+      "mcls",
+      "mucocutaneous"
+    ],
+    "exclude": []
+  },
+  "Pulmonary hypertension": {
+    "keywords": [
+      "pulmonary hypertension",
+      "pulmonary arterial hypertension",
+      "pah",
+      "pphn"
+    ],
+    "exclude": []
+  },
+  "CoA / IAA": {
+    "keywords": [
+      "coarctation of aorta",
+      "coarctation",
+      "coa",
+      "interrupted aortic arch",
+      "iaa"
+    ],
+    "exclude": []
+  },
+  "PDA": {
+    "keywords": [
+      "pda",
+      "patent ductus arteriosus",
+      "persistent ductus arteriosus"
+    ],
+    "exclude": [
+      "no pda",
+      "without pda"
+    ]
+  },
+  "VSD": {
+    "keywords": [
+      "vsd",
+      "ventricular septal defect"
+    ],
+    "exclude": [
+      "no vsd",
+      "without vsd"
+    ]
+  },
+  "ASD": {
+    "keywords": [
+      "asd",
+      "asd2",
+      "asd ii",
+      "atrial septal defect",
+      "secundum asd"
+    ],
+    "exclude": [
+      "no asd",
+      "without asd"
+    ]
+  },
+  "ECD": {
+    "keywords": [
+      "ecd",
+      "endocardial cushion defect",
+      "atrioventricular septal defect",
+      "avsd"
+    ],
+    "exclude": []
+  },
+  "TAPVR": {
+    "keywords": [
+      "tapvr",
+      "tapvc",
+      "total anomalous"
+    ],
+    "exclude": []
+  },
+  "Single ventricle": {
+    "keywords": [
+      "glenn",
+      "tcpc",
+      "fontan",
+      "total cavopulmonary",
+      "single v",
+      "single ventricle"
+    ],
+    "exclude": []
+  },
+  "Heterotaxy": {
+    "keywords": [
+      "heterotaxy",
+      "isomerism",
+      "rai",
+      "lai"
+    ],
+    "exclude": []
+  },
+  "DORV / TOF": {
+    "keywords": [
+      "dorv",
+      "double outlet",
+      "tof",
+      "tetralogy",
+      "tetrology"
+    ],
+    "exclude": []
+  },
+  "HLHS": {
+    "keywords": [
+      "hypoplastic left heart",
+      "hlh",
+      "hlhs"
+    ],
+    "exclude": []
+  }
+}
