@@ -7,7 +7,7 @@ Version: 0.3.0
 from pathlib import Path
 import re
 
-VERSION = "0.3.0"
+VERSION = "0.4.0"
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 INPUT_FOLDER = PROJECT_ROOT / "input"
@@ -78,3 +78,14 @@ NEGATION_WORDS = [
 ]
 
 LOG_FILE = LOG_FOLDER / "ERA.log"
+
+
+#########################################################
+# Disease reports
+#########################################################
+
+DISEASE_OUTPUT_FOLDER = OUTPUT_FOLDER / "disease_reports"
+DISEASE_OUTPUT_FOLDER.mkdir(exist_ok=True)
+
+DISEASE_DICTIONARY_FILE = DICTIONARY_FOLDER / "diseases.json"
+DISEASE_MATCH_DETAIL_COL = "疾病命中內容"
