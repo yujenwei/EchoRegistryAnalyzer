@@ -1,7 +1,7 @@
 """
 Echo Registry Analyzer (ERA)
 patient_engine.py
-Version: 0.3.0
+Version: 0.4.3
 
 Create one-row-per-patient summary from merged_all.xlsx.
 """
@@ -13,6 +13,7 @@ import pandas as pd
 
 import config
 from engines.text_utils import clean_value, unique_join, normalize_text
+from engines.excel_loader import ExcelLoader
 
 
 class PatientEngine:
@@ -73,8 +74,8 @@ class PatientEngine:
             )
 
         self.df = pd.read_excel(infile, dtype={config.COL_MRN: str})
-        self.df[config.COL_DATE] = pd.to_datetime(self.df[config.COL_DATE], errors="coerce")
-        self.df[config.COL_BIRTHDAY] = pd.to_datetime(self.df[config.COL_BIRTHDAY], errors="coerce")
+        self.df[config.COL_DATE] = self.df[config.COL_DATE].apply(ExcelLoader.parse_mixed_date)
+        self.df[config.COL_BIRTHDAY] = self.df[config.COL_BIRTHDAY].apply(ExcelLoader.parse_mixed_date)
         self.df[config.COL_MRN] = (
             self.df[config.COL_MRN]
             .fillna("")

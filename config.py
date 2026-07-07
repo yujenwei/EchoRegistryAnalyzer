@@ -7,7 +7,7 @@ Version: 0.3.0
 from pathlib import Path
 import re
 
-VERSION = "0.4.0"
+VERSION = "0.4.3"
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 INPUT_FOLDER = PROJECT_ROOT / "input"
@@ -89,3 +89,27 @@ DISEASE_OUTPUT_FOLDER.mkdir(exist_ok=True)
 
 DISEASE_DICTIONARY_FILE = DICTIONARY_FOLDER / "diseases.json"
 DISEASE_MATCH_DETAIL_COL = "疾病命中內容"
+
+
+#########################################################
+# Negation detection
+#########################################################
+
+NEGATION_WINDOW_WORDS = 6
+NEGATION_PREFIXES = [
+    "no",
+    "without",
+    "absence of",
+    "negative for",
+    "no evidence of",
+    "free of",
+    "rule out",
+    "r/o",
+]
+NEGATION_SUFFIXES = [
+    "absent",
+    "excluded",
+    "negative",
+    "not seen",
+    "not found",
+]

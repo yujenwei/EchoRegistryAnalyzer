@@ -1,7 +1,7 @@
 """
 Echo Registry Analyzer (ERA)
 run.py
-Version: 0.4.0
+Version: 0.4.3
 """
 
 from engines.merge_engine import MergeEngine

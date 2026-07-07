@@ -62,7 +62,21 @@
       "interrupted aortic arch",
       "iaa"
     ],
-    "exclude": []
+    "exclude": [
+      "negative for coa",
+      "negative for coarctation",
+      "no coa",
+      "No COA",
+      "no CoA",
+      "no coarctation",
+      "no coarctation of aorta",
+      "no evidence of coa",
+      "no evidence of coarctation",
+      "without coa",
+      "without CoA",
+      "without coarctation",
+      "without coarctation of aorta"
+    ]
   },
   "PDA": {
     "keywords": [

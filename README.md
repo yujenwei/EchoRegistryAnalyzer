@@ -1,6 +1,6 @@
 # Echo Registry Analyzer (ERA)
 
-Version 0.4.0
+Version 0.4.3
 
 ## 使用方式
 
@@ -76,3 +76,53 @@ dictionary/diseases.json
   "exclude": []
 }
 ```
+
+
+## v0.4.1 更新：Negation Detection
+
+疾病分類現在先在每一次檢查紀錄中判斷關鍵字是否為陽性，再彙整到病人層級。
+
+### 例子
+
+- 只有 `no PDA` 的病人：不會列入 PDA。
+- 曾經有 `PDA`，後來變成 `no PDA` 的病人：仍會列入 PDA。
+- `PDA closed`、`s/p PDA ligation` 會視為曾經有 PDA。
+- `no CoA`、`without CoA` 不會列入 CoA / IAA。
+
+
+## v0.4.2 更新：DiseaseEngine 效能改善
+
+v0.4.1 在大型資料庫中可能看起來像卡住，因為會重複過濾 examination-level DataFrame。
+
+v0.4.2 改為：
+
+- 先依病歷號碼預先分組檢查紀錄。
+- 每個疾病只掃描預先分組後的資料。
+- 執行時顯示疾病分類進度。
+
+仍保留 v0.4.1 的 row-level negation detection。
+
+
+## v0.4.3 更新
+
+### 1. 日期解析修正
+
+修正 Excel serial number 被解析成 `1970-01-01` 的問題。
+
+現在支援：
+
+- Excel serial number，例如 `45000`
+- `YYYYMMDD`，例如 `20200131`
+- 一般日期字串，例如 `2020/01/31`
+- 原本就是 datetime 的儲存格
+
+### 2. CoA / IAA 排除規則加強
+
+以下描述不會列入 CoA / IAA：
+
+- `No COA`
+- `no CoA`
+- `no coarctation`
+- `no coarctation of aorta`
+- `without CoA`
+- `without coarctation`
